@@ -1,35 +1,48 @@
-# pymongo-api
+## Задание 2
 
-## Как запустить
-
-Запускаем mongodb и приложение
+1. Из папки проекта второго задания "mongo-sharding" выполнить команду развёртывания кластера
 
 ```shell
 docker compose up -d
 ```
 
-Заполняем mongodb данными
-
+2. Инициализировать кластер выполнив поочердёно скрипты из папки "mongo-sharding/scripts"
 ```shell
-./scripts/mongo-init.sh
+sh mongo-init-cfg.sh
+sh mongo-init-shards.sh
+sh mongo-init-routers.sh
 ```
 
-## Как проверить
+## Задание 3
 
-### Если вы запускаете проект на локальной машине
+1. Удалить контейнеры и volumes, которые созданы в результате выполнения предыдущих заданий.
 
-Откройте в браузере http://localhost:8080
-
-### Если вы запускаете проект на предоставленной виртуальной машине
-
-Узнать белый ip виртуальной машины
+2. Из папки проекта третьего задания "mongo-sharding-repl" выполнить команду развёртывания кластера
 
 ```shell
-curl --silent http://ifconfig.me
+docker compose up -d
 ```
 
-Откройте в браузере http://<ip виртуальной машины>:8080
+3. Инициализировать кластер выполнив поочердёно скрипты из папки "mongo-sharding-repl/scripts"
+```shell
+sh mongo-init-cfg.sh
+sh mongo-init-shards.sh
+sh mongo-init-routers.sh
+```
 
-## Доступные эндпоинты
+## Задание 4
 
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
+1. Удалить контейнеры и volumes, которые созданы в результате выполнения предыдущих заданий.
+
+2. Из папки проекта четвёртого задания "sharding-repl-cache" выполнить команду развёртывания кластера
+
+```shell
+docker compose up -d
+```
+
+3. Инициализировать кластер выполнив поочердёно скрипты из папки "sharding-repl-cache/scripts"
+```shell
+sh mongo-init-cfg.sh
+sh mongo-init-shards.sh
+sh mongo-init-routers.sh
+```
